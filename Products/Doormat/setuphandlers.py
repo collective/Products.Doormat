@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 from Products.CMFCore.utils import getToolByName
+from plone.app.textfield.value import RichTextValue
 import logging
 
 
 DEFAULT_DOORMAT_DOCUMENT_HTML = """<p>
 This is the default doormat text.
-Please go to /doormat/column-1/section-1/document/edit to edit it.
+Please go to /doormat/column-1/section-1/document-1/edit to edit it.
 </p>"""
 DEFAULT_DOORMAT_DOCUMENT_TITLE = "Document title"
 logger = logging.getLogger('Doormat: setuphandlers')
@@ -40,7 +41,7 @@ def createDefaultContent(portal):
     document = _tryInvokeFactory(section, "Document", 'document-1')
     if document.meta_type.startswith('Dexterity'):
         # A Dexterity-link
-        document.text = DEFAULT_DOORMAT_DOCUMENT_HTML
+        document.text = RichTextValue(DEFAULT_DOORMAT_DOCUMENT_HTML, 'text/html', 'text/html')
         document.title = DEFAULT_DOORMAT_DOCUMENT_TITLE
     else:
         document.setText(DEFAULT_DOORMAT_DOCUMENT_HTML)
