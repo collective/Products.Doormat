@@ -1,8 +1,8 @@
 Changelog
 =========
 
-n (unreleased)
---------------
+1.1 (unreleased)
+----------------
 
 - Nothing changed yet.
 
