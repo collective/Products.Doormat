@@ -17,7 +17,7 @@
       title="Products.Doormat special import handlers"
       description=""
       handler="Products.Doormat.setuphandlers.setupVarious">
-    <depends name="types" />
+    <depends name="typeinfo" />
   </genericsetup:importStep>
 
 </configure>
