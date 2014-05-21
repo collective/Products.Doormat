@@ -1,18 +1,16 @@
 <?xml version="1.0"?>
+<object name="portal_skins">
 
-<object name="portal_skins"
-        meta_type="Plone Skins Tool"
-        allow_any="False"
-        cookie_persistence="False"
-        request_varname="plone_skin">
-
- <object name="doormat_images"
+ <object remove="True"
+         name="doormat_images"
          meta_type="Filesystem Directory View"
          directory="Doormat/skins/doormat_images"/>
- <object name="doormat_styles"
+ <object remove="True"
+         name="doormat_styles"
          meta_type="Filesystem Directory View"
          directory="Doormat/skins/doormat_styles"/>
- <object name="doormat_templates"
+ <object remove="True"
+         name="doormat_templates"
          meta_type="Filesystem Directory View"
          directory="Doormat/skins/doormat_templates"/>
 
