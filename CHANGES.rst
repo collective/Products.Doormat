@@ -4,8 +4,8 @@ Changelog
 1.1 (unreleased)
 ----------------
 
-- Nothing changed yet.
-
+- Do not remove existing content on reinstall
+  [pbauer]
 
 1.0 (2013-12-23)
 ----------------
