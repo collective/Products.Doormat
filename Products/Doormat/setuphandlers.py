@@ -49,6 +49,9 @@ def createDefaultContent(portal):
 
 
 def removeContent(context):
+    if is_not_doormat_uninstall_profile(context):
+        return
+
     portal = context.getSite()
     # Usually this should be enough
     if hasattr(portal, 'doormat'):
@@ -64,6 +67,10 @@ def removeContent(context):
 
 def isNotDoormatProfile(context):
     return context.readDataFile("Doormat_marker.txt") is None
+
+
+def is_not_doormat_uninstall_profile(context):
+    return context.readDataFile('doormat_uninstall_marker.txt') is None
 
 
 def setupVarious(context):
