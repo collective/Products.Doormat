@@ -7,6 +7,10 @@ Changelog
 - Do not remove existing content on reinstall
   [pbauer]
 
+- Add check for correct GS profile within import step.
+  [tmassman]
+
+
 1.0 (2013-12-23)
 ----------------
 
