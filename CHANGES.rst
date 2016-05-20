@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.1 (unreleased)
+1.1 (2016-05-20)
 ----------------
 
 - Do not remove existing content on reinstall
