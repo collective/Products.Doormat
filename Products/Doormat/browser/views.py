@@ -15,7 +15,11 @@ else:
 
 try:
     pkg_resources.get_distribution('plone.app.contenttypes')
-    from plone.app.contenttypes.utils import replace_link_variables_by_paths
+    try:
+        from plone.app.contenttypes.utils import replace_link_variables_by_paths
+    except ImportError:
+        # plone.app.contenttypes is not a Products.Doormart dependency.
+        pass
 except pkg_resources.DistributionNotFound:
     # We only use this import in an 'if' clause that asks if
     #     item.meta_type.startswith('Dexterity')
