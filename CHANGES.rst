@@ -4,7 +4,9 @@ Changelog
 1.2 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Adds support to ${navigation_root_url} and ${portal_url} in Dexterity links.
+  (closes `#9`_).
+  [idgserpro]
 
 
 1.1 (2016-05-20)
@@ -158,3 +160,5 @@ Merged collections branch.
 
 Initial release
 
+
+.. _`#9`: https://github.com/collective/Products.Doormat/issues/9

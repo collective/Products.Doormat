@@ -14,6 +14,15 @@ else:
     from plone.app.collection.interfaces import ICollection
 
 try:
+    pkg_resources.get_distribution('plone.app.contenttypes')
+    from plone.app.contenttypes.utils import replace_link_variables_by_paths
+except pkg_resources.DistributionNotFound:
+    # We only use this import in an 'if' clause that asks if
+    #     item.meta_type.startswith('Dexterity')
+    # So no harm in using 'pass' here.
+    pass
+
+try:
     pkg_resources.get_distribution('plone.app.contenttypes>=1.0b2')
 except pkg_resources.VersionConflict:
     # older versions don't have the dx-based-collections
@@ -91,7 +100,10 @@ class DoormatView(BrowserView):
                     elif item.portal_type == "Link":
                         if item.meta_type.startswith('Dexterity'):
                             # A Dexterity-link
-                            url = item.remoteUrl
+                            url = replace_link_variables_by_paths(
+                                self.context,
+                                item.remoteUrl
+                            )
                         else:
                             # Link is an Archetypes link
                             url = item.getRemoteUrl

@@ -24,6 +24,18 @@ class ProductsDoormatLayer(PloneSandboxLayer):
         )
         z2.installProduct(app, 'Products.Doormat')
 
+        import plone.app.contenttypes
+        xmlconfig.file(
+            'configure.zcml',
+            plone.app.contenttypes,
+            context=configurationContext
+        )
+
+        # XXX:
+        # plone.app.contenttypes needs plone.app.event, who needs this one.
+        # https://github.com/plone/plone.app.event/issues/81
+        z2.installProduct(app, 'Products.DateRecurringIndex')
+
     def setUpPloneSite(self, portal):
         applyProfile(portal, 'Products.Doormat:default')
         portal.acl_users.userFolderAddUser('admin',
@@ -35,9 +47,13 @@ class ProductsDoormatLayer(PloneSandboxLayer):
         setRoles(portal, TEST_USER_ID, ['Manager'])
 
     def tearDownPloneSite(self, portal):
+
         # not implemented yet
         #applyProfile(portal, 'Products.Doormat:uninstall')
-        pass
+
+        # plone.app.contenttypes needs plone.app.event, who needs this one.
+        # https://github.com/plone/plone.app.event/issues/81
+        z2.uninstallProduct(portal, 'Products.DateRecurringIndex')
 
 
 PRODUCTS_DOORMAT_FIXTURE = ProductsDoormatLayer()

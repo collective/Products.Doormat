@@ -42,6 +42,7 @@ setup(name='Products.Doormat',
       extras_require={
           'test': [
               'plone.app.testing',
+              'plone.app.contenttypes',
               'unittest2',
           ],
       },
