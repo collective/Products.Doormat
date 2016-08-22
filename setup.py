@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.2.dev0'
+version = '1.2.dev2'
 
 setup(name='Products.Doormat',
       version=version,
@@ -42,6 +42,9 @@ setup(name='Products.Doormat',
       extras_require={
           'test': [
               'plone.app.testing',
+              # I'm importing plone.app.contenttypes.utils, it doesn't exist
+              # in earlier versions.
+              'plone.app.contenttypes>=1.1b1',
               'unittest2',
           ],
       },
