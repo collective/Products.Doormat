@@ -4,7 +4,8 @@ Changelog
 1.2 (unreleased)
 ----------------
 
-- Adds support to ${navigation_root_url} and ${portal_url} in Dexterity links.
+- Adds support for ``${navigation_root_url}`` and ``${portal_url}`` in Dexterity links.
+  Sorry, Archetypes does not support this.
   (closes `#9`_).
   [idgserpro]
 
