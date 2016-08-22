@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.2 (unreleased)
+1.2 (2016-08-22)
 ----------------
 
 - Adds support for ``${navigation_root_url}`` and ``${portal_url}`` in Dexterity links.
