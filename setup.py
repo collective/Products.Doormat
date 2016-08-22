@@ -13,9 +13,9 @@ setup(name='Products.Doormat',
                         open(os.path.join("docs", "DEVELOPERS.txt")).read() +
                         open(os.path.join("docs", "TODO.txt")).read()),
       # Get more strings from
-      # http://pypi.python.org/pypi?%3Aaction=list_classifiers
+      # https://pypi.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
-          "Development Status :: 3 - Alpha",
+          "Development Status :: 5 - Production/Stable",
           "Environment :: Web Environment",
           "Framework :: Plone",
           "Framework :: Plone :: 4.3",
