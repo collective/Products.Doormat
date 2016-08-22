@@ -9,7 +9,7 @@ setup(name='Products.Doormat',
                   "footer. The links and text in the doormat are manageable "
                   "as content. ",
       long_description=(open("README.txt").read() + "\n" +
-                        open("CHANGES.rst").read() +
+                        open("CHANGES.rst").read() + "\n" +
                         open(os.path.join("docs", "DEVELOPERS.txt")).read() +
                         open(os.path.join("docs", "TODO.txt")).read()),
       # Get more strings from
