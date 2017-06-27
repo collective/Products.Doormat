@@ -11,6 +11,7 @@ ADD_CONTENT_PERMISSIONS = {
     'DoormatColumn': 'Doormat: Add DoormatColumn',
     'DoormatSection': 'Doormat: Add DoormatSection',
     'DoormatReference': 'Doormat: Add DoormatReference',
+    'DoormatLink': 'Doormat: Add DoormatLink',
     'DoormatMixin': 'Doormat: Add DoormatMixin',
     'DoormatCollection': 'Doormat: Add DoormatCollection',
 }
@@ -19,6 +20,7 @@ setDefaultRoles('Doormat: Add Doormat', ('Manager', 'Owner'))
 setDefaultRoles('Doormat: Add DoormatColumn', ('Manager', 'Owner'))
 setDefaultRoles('Doormat: Add DoormatSection', ('Manager', 'Owner'))
 setDefaultRoles('Doormat: Add DoormatReference', ('Manager', 'Owner'))
+setDefaultRoles('Doormat: Add DoormatLink', ('Manager', 'Owner'))
 setDefaultRoles('Doormat: Add DoormatMixin', ('Manager', 'Owner'))
 setDefaultRoles('Doormat: Add DoormatCollection', ('Manager', 'Owner'))
 

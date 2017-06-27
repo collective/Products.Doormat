@@ -56,7 +56,7 @@ def removeContent(context):
     catalog = getToolByName(portal, 'portal_catalog')
     # Remove _everything_.
     for ptype in ['DoormatReference', 'DoormatCollection', 'DoormatMixin',
-                  'DoormatSection', 'DoormatColumn', 'Doormat']:
+                  'DoormatSection', 'DoormatColumn', 'Doormat', 'DoormatLink']:
         for brain in catalog(portal_type=ptype):
             obj = brain.getObject()
             obj.aq_parent.manage_delObjects(brain.getId)

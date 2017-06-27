@@ -82,13 +82,14 @@ class DoormatView(BrowserView):
                     text = ''
                     url = ''
                     link_class = ''
+                    link_target = None
 
                     if item.portal_type == 'DoormatReference':
                         linked_item = item.getInternal_link()
                         if not linked_item:
                             continue
                         url = linked_item.absolute_url()
-                    elif item.portal_type == "Link":
+                    elif item.portal_type in ("Link", "DoormatLink"):
                         if item.meta_type.startswith('Dexterity'):
                             # A Dexterity-link
                             url = item.remoteUrl
@@ -96,6 +97,9 @@ class DoormatView(BrowserView):
                             # Link is an Archetypes link
                             url = item.getRemoteUrl
                         link_class = "external-link"
+                        if (item.portal_type == 'DoormatLink' and
+                                item.open_in_new_window):
+                            link_target = '_blank'
                     elif item.portal_type == "Document":
                         if item.meta_type.startswith('Dexterity'):
                             # A Dexterity-link
@@ -115,7 +119,6 @@ class DoormatView(BrowserView):
                                         + ' - ' + obj.title
                                 else:
                                     title = obj.title
-
                                 section_links.append({
                                     'content': '',
                                     'link_url': obj.absolute_url(),
@@ -180,6 +183,7 @@ class DoormatView(BrowserView):
                         'link_url': url,
                         'link_title': title,
                         'link_class': link_class,
+                        'link_target': link_target,
                         }
                     section_links.append(link_dict)
                 section_dict['section_links'] = section_links

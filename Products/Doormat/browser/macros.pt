@@ -32,6 +32,7 @@
             tal:attributes="
               href link/link_url;
               class link/link_class;
+              target link/link_target | nothing;
               "
             tal:content="link/link_title">
           [link title]

@@ -1,6 +1,12 @@
 Changelog
 =========
 
+unreleased
+----------
+
+- Add a DoormatLink type that offers the option to open in new window.
+  [tlotze]
+
 1.1 (unreleased)
 ----------------
 

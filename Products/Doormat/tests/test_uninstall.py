@@ -27,6 +27,7 @@ class DoormatUninstallTest(unittest.TestCase):
         self.assertFalse('DoormatColumn' in self.types.objectIds())
         self.assertFalse('DoormatSection' in self.types.objectIds())
         self.assertFalse('DoormatReference' in self.types.objectIds())
+        self.assertFalse('DoormatLink' in self.types.objectIds())
         self.assertFalse('DoormatCollection' in self.types.objectIds())
         self.assertFalse('DoormatMixin' in self.types.objectIds())
 

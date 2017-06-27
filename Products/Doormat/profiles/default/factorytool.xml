@@ -5,6 +5,7 @@
   <type portal_type="DoormatColumn"/>
   <type portal_type="DoormatSection"/>
   <type portal_type="DoormatReference"/>
+  <type portal_type="DoormatLink"/>
   <type portal_type="DoormatMixin"/>
   <type portal_type="DoormatCollection"/>
  </factorytypes>

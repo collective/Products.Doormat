@@ -22,6 +22,11 @@ class IDoormatReference(Interface):
     """
 
 
+class IDoormatLink(Interface):
+    """Marker interface for .DoormatLink.DoormatLink
+    """
+
+
 class IDoormatMixin(Interface):
     """Marker interface for .DoormatMixin.DoormatMixin
     """

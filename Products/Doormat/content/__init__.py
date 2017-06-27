@@ -3,6 +3,7 @@ import Doormat
 import DoormatColumn
 import DoormatSection
 import DoormatReference
+import DoormatLink
 import DoormatMixin
 import DoormatCollection
 
@@ -11,5 +12,6 @@ Doormat
 DoormatColumn
 DoormatSection
 DoormatReference
+DoormatLink
 DoormatMixin
 DoormatCollection

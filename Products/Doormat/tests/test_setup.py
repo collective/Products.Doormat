@@ -20,6 +20,7 @@ class ProductsDoormatSetupTest(unittest.TestCase):
         self.assertTrue('DoormatColumn' in self.types.objectIds())
         self.assertTrue('DoormatSection' in self.types.objectIds())
         self.assertTrue('DoormatReference' in self.types.objectIds())
+        self.assertTrue('DoormatLink' in self.types.objectIds())
         self.assertTrue('DoormatCollection' in self.types.objectIds())
         self.assertTrue('DoormatMixin' in self.types.objectIds())
 
